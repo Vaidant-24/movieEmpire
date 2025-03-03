@@ -15,14 +15,13 @@ function App() {
 
       const data = await response.json();
       setMovie(data.Search);
-      console.log(data.Search);
     } catch (error) {
       console.log("Error while fetching: ", error);
     }
   };
 
   useEffect(() => {
-    searchMovies("Spiderman");
+    searchMovies(search);
   }, []);
 
   return (
