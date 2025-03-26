@@ -1,15 +1,34 @@
-# React + Vite
+# React Test Project  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview  
+This project is a simple React application that fetches and displays posts from an API. It includes pagination, dynamic routing, and state management to enhance the user experience.  
 
-Currently, two official plugins are available:
+## Features  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1. Routing  
+- `/` (Home Page): Contains navigation to the `/posts` page.  
+- `/posts` (Posts Page): Fetches and displays all posts in a paginated format.  
+- `/add-post` (Add Post Page): Allows users to submit a new post and display it in the posts list.  
 
-## Expanding the ESLint configuration
+### 2. Fetching and Displaying Posts  
+- Retrieves all posts from an API and stores them in the application's context.  
+- Displays posts using a reusable **Card Component**.  
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 3. Adding a New Post  
+- Uses a form to submit a new post, which is added to the context and displayed in the posts list.  
+- Shows a **"Loading..."** text while the API request is in progress.  
 
+## API Endpoints  
+- **Get all posts:** [https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts)  
+- **Post a new post:** [https://jsonplaceholder.typicode.com/posts/](https://jsonplaceholder.typicode.com/posts/)  
 
-https://chatgpt.com/share/67e22fd5-d84c-8003-ae19-453fec54516c
+## Installation & Running the Project  
+```sh
+yarn install
+yarn dev
+```
+
+> **Note:** The application uses React Context to manage the posts list.  
+
+## Final Output  
+Refer to the **project_00000** video available in the project folder to see the expected output.  
